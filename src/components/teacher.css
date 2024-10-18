@@ -1,0 +1,136 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar {
+  width: 20%;
+  background-color: rgba(90, 235, 58, 0.25); /* Updated color */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sidebar .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sidebar .logo img {
+  width: 144px;
+  filter: brightness(11);
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+#sidebar ul li {
+  margin: 15px 0;
+}
+
+#sidebar ul li button {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#sidebar ul li button:hover {
+  background-color: #e9ecef;
+}
+
+#main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar {
+  width: 100%; /* Make the calendar 100% of the width */
+  margin: 0 auto; /* Center the calendar horizontally */
+  height: auto; /* Allow the height to adjust */
+}
+
+#calendar-container {
+  margin-bottom: 100px; /* Add some space below the calendar */
+  padding: 0 20px; /* Add padding for better spacing */
+}
+
+#bookings-container {
+  margin-top: 50px; /* Adjust space above the bookings section */
+  padding: 0 20px; /* Add padding for better spacing */
+}
+
+.current-slots th, .current-slots td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.current-slots th {
+  background-color: #f2f2f2;
+}
+
+.action-buttons button {
+  margin-right: 5px;
+}
+
+.fc-timegrid-slot-lane {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.fc-timegrid-slot-lane div {
+  width: 10%;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #calendar {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  #bookings-container {
+    margin-top: 30px; /* Adjust space above the bookings section */
+  }
+
+  .current-slots th, .current-slots td {
+    padding: 6px; /* Reduce padding for smaller screens */
+  }
+
+  .action-buttons button {
+    margin-right: 3px; /* Reduce margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #calendar {
+    height: 300px; /* Further adjust height for very small screens */
+  }
+
+  .current-slots th, .current-slots td {
+    padding: 4px; /* Further reduce padding for very small screens */
+  }
+
+  .action-buttons button {
+    margin-right: 2px; /* Further reduce margin for very small screens */
+  }
+}
